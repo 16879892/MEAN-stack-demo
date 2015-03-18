@@ -5,11 +5,12 @@
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 var express = require('./config/express'),
-    mongoose = require('./config/mongoose');
+    mongoose = require('./config/mongoose'),
+    passport = require('./config/passport');
 
-//@Todo: order 测试
 var db = mongoose();
 var app = express();
+var passport = passport();
 
 app.listen(3000);
 module.exports = app;
