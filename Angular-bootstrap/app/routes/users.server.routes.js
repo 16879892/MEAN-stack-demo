@@ -6,7 +6,7 @@ var users = require('../../app/controllers/users.server.controller'),
 
 module.exports = function(app){
     app.route('/signup')
-        .get(users.rendreSignup)
+        .get(users.renderSignup)
         .post(users.signup);
 
     app.route('/signin')
