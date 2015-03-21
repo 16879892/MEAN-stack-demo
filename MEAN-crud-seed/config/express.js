@@ -44,7 +44,9 @@ module.exports = function(){
     //route
     require('../app/routes/index.server.routes.js')(app);
     require('../app/routes/users.server.routes.js')(app);
-    //Serving statitc files
+    require('../app/routes/articles.server.routes.js')(app);
+
+    //Serving static files
     app.use(express.static('./public'));
     return app;
 };
